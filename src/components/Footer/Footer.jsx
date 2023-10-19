@@ -8,66 +8,52 @@ const Footer = () => {
           <div className="">
             <h6 className="text-left">About</h6>
             <p className="text-justify">
-              Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to
-              help the upcoming programmers with the code. Scanfcode focuses on
-              providing the most efficient code or snippets as the code wants to
-              be simple. We will help programmers build up concepts in different
-              programming languages that include C, C++, Java, HTML, CSS,
-              Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.
+              CarUniverse.com is your gateway to a world of automotive
+              exploration. Discover, connect, and learn about everything related
+              to cars on our user-friendly platform. Whether you are buying,
+              selling, or simply passionate about automobiles, CarUniverse.com
+              is your trusted companion on the road to automotive discovery.
             </p>
           </div>
 
-          <div className="">
+          <div>
             <h6>Categories</h6>
-            <ul className="footer-links">
+            <ul className="footer-links text-left ml-28">
               <li>
-                <a href="http://scanfcode.com/category/c-language/">C</a>
+                <a href="#">Sedan</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/category/front-end-development/">
-                  UI Design
-                </a>
+                <a href="#">Coupe</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/category/back-end-development/">
-                  PHP
-                </a>
+                <a href="#">SUV</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/category/java-programming-language/">
-                  Java
-                </a>
+                <a href="#">Hatchback</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/category/android/">Android</a>
-              </li>
-              <li>
-                <a href="http://scanfcode.com/category/templates/">Templates</a>
+                <a href="#">Convertible</a>
               </li>
             </ul>
           </div>
 
           <div className="">
             <h6>Quick Links</h6>
-            <ul className="footer-links">
+            <ul className="footer-links text-right mr-28">
               <li>
-                <a href="http://scanfcode.com/about/">About Us</a>
+                <a href="#">Home</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/contact/">Contact Us</a>
+                <a href="#">My Cart</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/contribute-at-scanfcode/">
-                  Contribute
-                </a>
+                <a href="#">Add Listing</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/privacy-policy/">
-                  Privacy Policy
-                </a>
+                <a href="#">Privacy Policy</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+                <a href="#">Sitemap</a>
               </li>
             </ul>
           </div>

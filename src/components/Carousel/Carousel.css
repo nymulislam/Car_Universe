@@ -18,8 +18,8 @@ body {
 }
 
 .container>header {
-    top: 120px;
-    left: 50px;
+    top: 140px;
+    left: 32px;
     position: relative;
     display: block;
 }
