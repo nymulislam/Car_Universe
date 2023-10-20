@@ -7,24 +7,23 @@
   font-family: "Poppins", sans-serif;
 }
 
-.box-container {
+.box {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background: #23242a;
 }
 
 .register-box .box {
-  margin-top: 115px;
+  margin-top: 125px;
   margin-bottom: 50px;
-  height: 595px;
+  height: 515px;
 }
 
  .box {
   position: relative;
   width: 400px;
-  height: 470px;
+  height: 525px;
   background: #1c1c1c;
   border-radius: 18px;
   overflow: hidden;
