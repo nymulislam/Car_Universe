@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Register.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,6 +8,8 @@ import swal from "sweetalert";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -39,10 +41,12 @@ const Register = () => {
         }
       );
     } else {
-      createUser(email, password)
+      createUser(email, password, name)
         .then((result) => {
           console.log(result.user);
           swal("Good job!", "You have successfully registered.", "success");
+          navigate("/");
+          form.reset();
         })
         .catch((error) => {
           console.log(error);

@@ -1,22 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
 import "./Navbar.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
-import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
-const Navbar = ({login, handleLogout}) => {
-  const { signin } = useContext(AuthContext);const options = ["Profile", "Settings", "Sign Out"]
-  const [selectedOption, setSelectedOption] = useState(options[0]);
-
-  const handleOptionSelect = (selected) => {
-    setSelectedOption(selected.value);
-
-    if (selected.value === "Sign Out") {
-      handleLogout();
-    }
-  };
+const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
 
   return (
     <nav className="bg-white dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 navbar flex-col items-stretch">
@@ -62,20 +52,41 @@ const Navbar = ({login, handleLogout}) => {
                 </div>
               </button>
             </Link>
-            {login ? (
-            <Dropdown
-              options={options}
-              onChange={handleOptionSelect}
-              value="Menu"
-            />
-          )  : (
-              <>
-                <Link to="/login">
-                  <button className="btn btn-circle btn-lg bt ms text-white hover:bg-black bg-[rgba(0,0,0,0.5)] hover:text-[#ff4605] font-bold text-base normal-case hover:border-[#ff4605]">
-                    Login
-                  </button>
-                </Link>
-              </>
+            {user ? (
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-outline btn-error btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img
+                      src={user.photoURL || "https://placehold.co/600x400"}
+                      alt="Profile"
+                    />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-fit"
+                >
+                  <li>
+                    <a className="text-base py-2">
+                      {user.displayName}
+                    </a>
+                  </li>
+                  <li className="py-3">
+                    <a className="text-xl">{user.email}</a>
+                  </li>
+                  <li>
+                    <button onClick={() => logout()} className="btn btn-outline btn-error pt-3">
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <Link to="/login">
+                <button className="btn btn-circle btn-md bt ms text-white hover:bg-black bg-[rgba(0,0,0,0.5)] hover:text-[#ff4605] font-bold text-base normal-case hover:border-[#ff4605]">
+                  Login
+                </button>
+              </Link>
             )}
           </div>
         </div>

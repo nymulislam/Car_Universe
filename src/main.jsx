@@ -12,6 +12,7 @@ import MyCart from "./components/MyCart/MyCart";
 import AuthProvider from "./components/Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PrivetRoute from "./components/PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: <MyCart></MyCart>,
+        element: <PrivetRoute><MyCart></MyCart></PrivetRoute>
       },
       {
         path: "/register",
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addCar",
-        element: <AddCar></AddCar>,
+        element: <PrivetRoute><AddCar></AddCar></PrivetRoute>
       },
     ],
   },
