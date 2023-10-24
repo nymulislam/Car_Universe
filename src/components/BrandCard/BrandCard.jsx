@@ -1,48 +1,33 @@
+import { Link, useNavigate } from "react-router-dom";
 import "./BrandCard.css";
+import { useState, useEffect } from "react";
 
 const BrandCard = () => {
+  const [brands, setBrands] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("./brands.json")
+      .then((res) => res.json())
+      .then((data) => setBrands(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <div className="wrapper mb-10">
-      <h2>
-        <strong className="text-4xl ln">
-        Explore Our Luxury Lineup
-        </strong>
+      <h2 className="text-center">
+        <strong className="text-4xl ln ">Explore Our Luxury Lineup</strong>
       </h2>
 
-      <div className="cards grid grid-cols-3 justify-items-center max-w-5xl mx-auto">
-        <figure className="card">
-          <img src="tesla.png" />
-
-          <figcaption>T E S L A</figcaption>
-        </figure>
-
-        <figure className="card">
-          <img src="mercedes.png" />
-
-          <figcaption>MERCEDES</figcaption>
-        </figure>
-
-        <figure className="card">
-          <img src="bmw.png" />
-
-          <figcaption>B M W</figcaption>
-        </figure>
-
-        <figure className="card">
-          <img src="honda.png" />
-
-          <figcaption>H O N D A</figcaption>
-        </figure>
-        <figure className="card">
-          <img src="hyundai.png" />
-
-          <figcaption>H Y U N D A I</figcaption>
-        </figure>
-        <figure className="card">
-          <img src="nissan.png" />
-
-          <figcaption>N I S S A N</figcaption>
-        </figure>
+      <div className="cards grid sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center lg:max-w-5xl mx-auto">
+        {brands.map((brand) => (
+          <Link key={brand.id} to={`/showCars/${brand.brandName}`}>
+            <figure className="card">
+              <img src={brand.brandImage} alt={brand.brandName} />
+              <figcaption className="text-center">{brand.brandName}</figcaption>
+            </figure>
+          </Link>
+        ))}
       </div>
     </div>
   );

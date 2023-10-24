@@ -13,6 +13,7 @@ import AuthProvider from "./components/Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PrivetRoute from "./components/PrivetRoute/PrivetRoute";
+import ShowCars from "./components/ShowCars/ShowCars";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         path: "/addCar",
         element: <PrivetRoute><AddCar></AddCar></PrivetRoute>
       },
+      {
+        path: "/showCars/:brandName",
+        element: <ShowCars></ShowCars>,
+        loader: ({params}) => fetch(`http://localhost:5000/cars?brand=${params.brandName}`)
+      }
     ],
   },
 ]);

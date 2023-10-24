@@ -29,7 +29,7 @@ const Carousel = () => {
             Find Your <span className="text-[#ff4605]">Perfect</span> Car
           </h1>
         </header>
-        <div className="grid grid-cols-5 max-w-3xl mx-auto justify-items-end">
+        <div className="grid grid-cols-3 md:grid-cols-5 max-w-3xl mx-auto md:justify-items-end">
           <div className="border-white rounded-full border-2 mt-48 w-20 h-20 hover:border-[#ff4605] transition-colors duration-300 relative">
             <div className="absolute top-6 -left-6">
               <svg

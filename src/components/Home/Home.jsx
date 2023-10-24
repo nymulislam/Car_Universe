@@ -1,7 +1,7 @@
-import AdExtra from "../AdExtra/AdExtra";
 import BrandCard from "../BrandCard/BrandCard";
 import Carousel from "../Carousel/Carousel";
 import Featured from "../Featured/Featured";
+import AdExtra from "../AdExtra/AdExtra";
 
 const Home = () => {
   return (
@@ -11,6 +11,7 @@ const Home = () => {
         <BrandCard></BrandCard>
         <Featured></Featured>
         <AdExtra></AdExtra>
+
       </div>
     </>
   );

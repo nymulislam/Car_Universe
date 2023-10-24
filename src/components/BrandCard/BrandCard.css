@@ -1,6 +1,6 @@
 body {
     background: #4f575e;
-    background-image: url('public/bgpattern.png');
+    background-image: url('/bgpattern.png');
     font-family: 'Alegreya Sans';
   }
   
@@ -20,6 +20,7 @@ body {
   h2 strong {
     position: relative;
     vertical-align: middle;
+    
     z-index: 2;
     padding: 4px 8px;
   }

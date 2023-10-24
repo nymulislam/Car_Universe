@@ -1,23 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
-import "./Navbar.css";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import "react-dropdown/style.css";
-
+import "./Navbar.css"
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
 
   return (
-    <nav className="bg-white dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 navbar flex-col items-stretch">
-      <div className="flex flex-wrap items-center justify-between">
+    <nav className="bg-white dark:bg-[rgba(0,0,0,0.3)] z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 navbar flex-col items-stretch fixed">
+      <div className="flex flex-wrap lg:flex-nowrap items-center justify-between">
         <div>
-          <Link to="/" className="flex mr-24 ml-5">
-            <img src="car_logo.png" className="w-[70%] mr-0" alt="Car Logo" />
+          <Link to="/" className="flex justify-center md:mr-24 ml-5">
+            <img src="../car_logo.png" className="w-[70%] mr-0" alt="Car Logo" />
           </Link>
         </div>
-        <div className="items-center w-full md:flex md:w-auto">
-          <ul className="flex text-white flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-1 md:mt-0 md:border-0 text-xl font-medium">
+        <div className="md:flex text-center items-center flex-row lg:justify-evenly lg:w-full md:w-auto">
+          <ul className="flex text-white flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row lg:gap-8 md:space-x-1 md:mt-0 md:border-0 text-xl font-medium">
             <li>
               <NavLink
                 to="/"
@@ -36,7 +35,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <div className="flex items-center">
+          <div className="flex items-center mt-3 md:mt-0 lg:gap-4">
             <Link to="/register">
               <button className="btn bt ms text-white hover:bg-black bg-[rgba(0,0,0,0.5)] hover:text-[#ff4605] font-bold text-base normal-case border-[#ff4605]">
                 Register

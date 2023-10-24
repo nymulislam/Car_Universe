@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="site-footer p-10 max-w-7xl">
       <div className="container mx-auto">
-        <div className="grid grid-cols-3 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 mb-6">
           <div className="">
             <h6 className="text-left">About</h6>
             <p className="text-justify">
@@ -16,9 +16,9 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
-            <h6>Categories</h6>
-            <ul className="footer-links text-left ml-28">
+          <div className="text-center mt-10 lg:mt-0">
+            <h6 className="lg:mr-14">Categories</h6>
+            <ul className="lg:ml-28 text-left">
               <li>
                 <a href="#">Sedan</a>
               </li>
@@ -37,9 +37,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="">
-            <h6>Quick Links</h6>
-            <ul className="footer-links text-right mr-28">
+          <div className="text-center mt-10 lg:mt-0">
+            <h6 className="lg:ml-14">Quick Links</h6>
+            <ul className="lg:mr-28 text-right">
               <li>
                 <a href="#">Home</a>
               </li>
@@ -61,7 +61,7 @@ const Footer = () => {
         <hr />
       </div>
       <div className="container mx-auto">
-        <div className="flex items-center justify-between mt-6">
+        <div className="flex items-center flex-col-reverse lg:flex-row lg:justify-between mt-6">
           <div className="">
             <p className="copyright-text">
               Copyright © 2023 All Rights Reserved by <span></span>
@@ -69,7 +69,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="">
+          <div className="order-1">
             <ul className="social-icons">
               <li>
                 <button
