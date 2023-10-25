@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import PrivetRoute from "./components/PrivetRoute/PrivetRoute";
 import ShowCars from "./components/ShowCars/ShowCars";
 import DetailPage from "./components/DetailPage/DetailPage";
+import UpdatePage from "./components/UpdatePage/UpdatePage";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
       {
         path: "/detailPage/:id",
         element: <PrivetRoute><DetailPage></DetailPage></PrivetRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+
+      },
+      {
+        path: "/updatePage/:id",
+        element: <PrivetRoute><UpdatePage></UpdatePage></PrivetRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
 
       }

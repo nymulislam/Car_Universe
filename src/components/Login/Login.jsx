@@ -97,7 +97,7 @@ const Login = () => {
             </button>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px bg-gray-400 sm:w-16 dark:bg-gray-400"></div>
-          <p className="font-semibold text-base px-3 dark:text-gray-300">
+          <p className="font-semibold text-base text-gray-300 px-3 dark:text-gray-300">
             Login with social accounts
           </p>
           <div className="flex-1 bg-gray-400 h-px sm:w-16 dark:bg-gray-400"></div>

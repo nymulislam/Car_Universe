@@ -1,10 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./BrandCard.css";
 import { useState, useEffect } from "react";
 
 const BrandCard = () => {
   const [brands, setBrands] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("./brands.json")

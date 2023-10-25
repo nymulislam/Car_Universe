@@ -43,9 +43,11 @@ const ShowCars = () => {
                       Details
                     </button>
                     </Link>
-                    <button className="mt-2 py-2 px-4 bg-blue-400 text-gray-800 font-bold rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <Link to={`/updatePage/${car._id}`}>
+                    <button className="mt-2 py-2 px-4 bg-lime-500 text-gray-800 font-bold rounded-lg shadow-md hover:shadow-lg transition duration-300">
                       Update
                     </button>
+                    </Link>
                     </div>
                   </div>
                   <div className="absolute top-2 right-2 py-2 px-4 bg-[#ff4605] text-white rounded-lg">
@@ -55,7 +57,7 @@ const ShowCars = () => {
               </div>
             ))
           ) : (
-            <div className="card w-96 bg-base-100 shadow-xl ml-[500px] mt-10">
+            <div className="card w-96 bg-base-100 shadow-xl ml-[300px] mt-10">
               <figure>
                 <img src="/notFound.png" alt="notFound" />
               </figure>
