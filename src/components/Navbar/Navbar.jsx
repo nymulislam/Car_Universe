@@ -6,13 +6,12 @@ import "react-dropdown/style.css";
 import "./Navbar.css"
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
-
   return (
-    <nav className="bg-white dark:bg-[rgba(0,0,0,0.3)] z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 navbar flex-col items-stretch fixed">
+    <nav className="dark:bg-[rgba(0,0,0,0.3)] bg-[rgba(0,0,0,0.3)] z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 navbar flex-col items-stretch fixed">
       <div className="flex flex-wrap lg:flex-nowrap items-center justify-between">
         <div>
           <Link to="/" className="flex justify-center md:mr-24 ml-5">
-            <img src="../car_logo.png" className="w-[70%] mr-0" alt="Car Logo" />
+            <img src="/car_logo.png" className="w-[70%] mr-0" alt="Car Logo" />
           </Link>
         </div>
         <div className="md:flex text-center items-center flex-row lg:justify-evenly lg:w-full md:w-auto">
