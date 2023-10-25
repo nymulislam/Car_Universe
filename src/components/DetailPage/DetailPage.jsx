@@ -7,10 +7,10 @@ const DetailPage = () => {
   const [cartAdded, setCartAdded] = useState(false);
 
   const handleAddCart = () => {
-    fetch(`http://localhost:5000/cars/${car._id}`)
+    fetch(`https://car-universe-server.vercel.app/cars/${car._id}`)
       .then((res) => res.json())
       .then((carDetails) => {
-        fetch("http://localhost:5000/cart/add", {
+        fetch("https://car-universe-server.vercel.app/cart/add", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

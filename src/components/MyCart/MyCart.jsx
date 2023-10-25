@@ -5,13 +5,13 @@ const MyCart = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cart/add")
+    fetch("https://car-universe-server.vercel.app/cart/add")
       .then((res) => res.json())
       .then((data) => setCart(data));
   }, []);
 
   const handleRemoveFromCart = (id) => {
-    fetch(`http://localhost:5000/cart/${id}`, {
+    fetch(`https://car-universe-server.vercel.app/cart/${id}`, {
       method: "DELETE",
     })
       .then(() => {

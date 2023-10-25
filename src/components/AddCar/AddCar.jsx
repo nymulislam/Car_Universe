@@ -29,7 +29,7 @@ const AddCar = () => {
 
     console.log(getValue);
 
-    fetch("http://localhost:5000/cars", {
+    fetch("https://car-universe-server.vercel.app/cars", {
       method: "POST",
       headers: {
         "content-type": "application/json",

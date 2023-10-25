@@ -30,7 +30,7 @@ const UpdatePage = () => {
 
     console.log(UpdateValue);
 
-    fetch(`http://localhost:5000/cars/${car._id}`, {
+    fetch(`https://car-universe-server.vercel.app/cars/${car._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

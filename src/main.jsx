@@ -46,18 +46,18 @@ const router = createBrowserRouter([
       {
         path: "/showCars/:brandName",
         element: <ShowCars></ShowCars>,
-        loader: ({params}) => fetch(`http://localhost:5000/cars?brand=${params.brandName}`)
+        loader: ({params}) => fetch(`https://car-universe-server.vercel.app/cars?brand=${params.brandName}`)
       },
       {
         path: "/detailPage/:id",
         element: <PrivetRoute><DetailPage></DetailPage></PrivetRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+        loader: ({params}) => fetch(`https://car-universe-server.vercel.app/cars/${params.id}`)
 
       },
       {
         path: "/updatePage/:id",
         element: <PrivetRoute><UpdatePage></UpdatePage></PrivetRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+        loader: ({params}) => fetch(`https://car-universe-server.vercel.app/cars/${params.id}`)
 
       }
     ],
